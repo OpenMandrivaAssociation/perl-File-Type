@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
 Source0:	http://search.cpan.org/CPAN/authors/id/P/PA/PMISON/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel 
+BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
 
 %description
