@@ -15,7 +15,8 @@ BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
 
 %description
-File::Type is a perl module that can be used to determine file type using magic.
+File::Type is a perl module that can be used to determine file type using
+magic.
 
 %prep
 %setup -q -n %{module}-%{version}
