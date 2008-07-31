@@ -1,6 +1,6 @@
 %define module 	File-Type
 %define version 0.22
-%define release %mkrel 4
+%define release %mkrel 6
 
 Summary:	Perl module to determine file type using magic
 Name: 		perl-%{module}
