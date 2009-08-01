@@ -1,25 +1,25 @@
-%define module 	File-Type
-%define version 0.22
-%define release %mkrel 6
+%define upstream_name 	 File-Type
+%define upstream_version 0.22
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl module to determine file type using magic
-Name: 		perl-%{module}
-Version: 	%{version}
-Release: 	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PA/PMISON/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel 
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/P/PA/PMISON/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 File::Type is a perl module that can be used to determine file type using
 magic.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -40,5 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README Changes
 %{perl_vendorlib}/File/*
 %{_mandir}/*/*
-
-
