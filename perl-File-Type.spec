@@ -2,14 +2,14 @@
 %define upstream_version 0.22
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	Perl module to determine file type using magic
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PA/PMISON/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/File-Type
+Source0:	https://cpan.metacpan.org/authors/id/P/PM/PMISON/File-Type-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
