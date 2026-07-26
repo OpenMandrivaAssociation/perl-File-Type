@@ -1,15 +1,13 @@
 %define upstream_name 	 File-Type
-%define upstream_version 0.22
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.22
+Release:	6
 
 Summary:	Perl module to determine file type using magic
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/File-Type
-Source0:	https://cpan.metacpan.org/authors/id/P/PM/PMISON/File-Type-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PM/PMISON/File-Type-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +18,7 @@ File::Type is a perl module that can be used to determine file type using
 magic.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -40,9 +38,7 @@ make test
 %changelog
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.220.0-1mdv2010.0
 + Revision: 406007
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.22-6mdv2009.0
+- rebuild using %0.22 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.22-6mdv2009.0
 + Revision: 257038
 - rebuild
 
